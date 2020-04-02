@@ -23,13 +23,9 @@ public class PedometerFragment extends Fragment {
         pedometerViewModel =
                 ViewModelProviders.of(this).get(PedometerViewModel.class);
         View root = inflater.inflate(R.layout.fragment_pedometer, container, false);
-        final TextView textView = root.findViewById(R.id.text_pedometer);
-        pedometerViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+
+
         return root;
     }
 }
